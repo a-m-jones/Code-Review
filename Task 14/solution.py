@@ -15,10 +15,19 @@ def read_timestamp(fname):
 
 def read_data(directory):
     fnames = [directory+'/'+i for i in os.listdir(directory)]
+    
+    path = './data/'
+    date = '1980-09-16T12'
+
+    # x_coords = np.genfromtxt(path + 'xcoordinates_{}/00/00.000000000'.format(date))
+
+    data = np.genfromtxt('./data/xcoordinates_1980-09-16T12/00/00.000000000.txt')
+
+    # print x_coords
 
     # do your stuff here
 
-    return dataset  # dataset might be an xarray.Dataset object or a clever structure of arrays 
+    # return dataset  # dataset might be an xarray.Dataset object or a clever structure of arrays 
 
 
 def get_month_average_temp(dataset, month):
